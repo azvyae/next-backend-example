@@ -24,7 +24,7 @@ async function POST(req: NextRequest) {
       );
     }
     const res = {
-      token: "AowhcxMxFzwjrUV7nHpBcahKasozheYUmL6izefZds6ibz1XlmY6TsOWRBeOXqJY",
+      token: process.env.USER_TOKEN,
     };
     return NextResponse.json(res);
   } catch (error) {

@@ -8,10 +8,7 @@ function GET(req: NextRequest) {
       { status: 401, statusText: "Unauthorized" }
     );
   }
-  if (
-    authorizationHeader !==
-    `Bearer AowhcxMxFzwjrUV7nHpBcahKasozheYUmL6izefZds6ibz1XlmY6TsOWRBeOXqJY`
-  ) {
+  if (authorizationHeader !== `Bearer ${process.env.USER_TOKEN}`) {
     return NextResponse.json(
       { message: "Unauthorized" },
       { status: 401, statusText: "Unauthorized" }
