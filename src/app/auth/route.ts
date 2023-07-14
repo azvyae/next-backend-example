@@ -17,7 +17,7 @@ async function POST(req: NextRequest) {
         { status: 400, statusText: "Bad Request" }
       );
     }
-    if (body.email !== "azvya@example.app" && body.password !== "example2048") {
+    if (body.email !== "azvya@example.app" || body.password !== "example2048") {
       return NextResponse.json(
         { message: "Invalid credentials" },
         { status: 422, statusText: "Invalid credentials" }
