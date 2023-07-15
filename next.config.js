@@ -15,6 +15,33 @@ const nextConfig = {
           }
         ],
       },
+      {
+        source: "/auth",
+        headers: [
+          {
+            key: "Access-Control-Allow-Methods",
+            value: "POST",
+          },
+        ],
+      },
+      {
+        source: "/foods",
+        headers: [
+          {
+            key: "Access-Control-Allow-Methods",
+            value: "GET",
+          },
+        ],
+      },
+      {
+        source: "/",
+        headers: [
+          {
+            key: "Access-Control-Allow-Methods",
+            value: "GET",
+          },
+        ],
+      },
     ];
   },
 };
